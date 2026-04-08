@@ -1,1 +1,24 @@
-These files define which mobile applications are trusted to interact with your domain and can expose sensitive information such as internal or beta application identifiers, package names, certificate fingerprints, and URL paths, including potentially undocumented or staging routes. While this does not pose an immediate exploit, it increases the visibility of internal mobile assets and may aid reconnaissance by unauthorized parties. We recommend that your team review the current configuration, confirm whether all listed apps and paths are necessary for production, and remove any internal, beta, or overly broad entries to minimize unnecessary public exposure.
+Hi [Client/Team],
+
+During our recent security review, we observed below mentioned publicly accessible files on your domain require attention:
+
+Mobile App Trust Files
+
+/.well-known/apple-app-site-association (iOS)
+/.well-known/assetlinks.json (Android)
+
+These files define which mobile applications are trusted to interact with your domain and can expose sensitive information such as internal or beta application identifiers, package names, certificate fingerprints, and URL paths, including potentially undocumented or staging routes. While not directly exploitable, they increase visibility of internal mobile assets and may aid unauthorized reconnaissance. We recommend reviewing these files to confirm all listed apps and URL paths are necessary for production and removing any internal, beta, or overly broad entries.
+
+Exposed DLL Files
+
+System.Runtime.InteropServices.RuntimeInformation.dll
+netstandard.dll
+Microsoft.Web.Administration.dll
+
+By themselves, these DLLs do not contain secrets or credentials. However, exposing DLLs might help an attacker fingerprint your .NET version or see which libraries you are using, and it can also give an attacker information about your environment if they can access and load them. This is generally low risk, but it contributes to information disclosure. Any DLLs not required for public access should be moved outside the webroot or protected with proper access controls.
+
+Additionally, we request your confirmation that all other publicly accessible files (e.g., images, PDFs, Excel sheets, scripts) are intended to be a part of public documentation or assets. This confirmation is required for vulnerability assessment (VA) tracking purposes.
+
+Best regards,
+[Your Name]
+[Your Role]
