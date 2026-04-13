@@ -1,3 +1,5 @@
-The issue is that when I use only Postman to send and receive requests (without Burp Suite), I am able to see the decrypted response. However, when I configure Burp Suite by setting it as an upstream proxy, the response appears encrypted.
+Hi,
 
-I suspect this may be due to the fact that the provided EXE automatically installs certificates into the system trust store, and Postman is able to use that trust context. However, Burp Suite may not be inheriting or utilizing the same certificate/trust configuration, which could be causing it to receive the encrypted response.
+As confirmed over Teams, we are currently unable to access the APIs as the external partner system is down.
+
+Please let us know once it is back online so we can proceed with the testing.
