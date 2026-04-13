@@ -1,18 +1,3 @@
-Hi [Name],
+The issue is that when I use only Postman to send and receive requests (without Burp Suite), I am able to see the decrypted response. However, when I configure Burp Suite by setting it as an upstream proxy, the response appears encrypted.
 
-We have received a request from an application team for API testing. They have shared API requests along with an executable file that contains configuration details such as certificates and private keys. These APIs must be accessed via a proxy server configured by their team.
-
-The current process to invoke the APIs is as follows:
-
-Run the provided executable file
-Configure Postman with the server address and port number
-Send the API requests
-
-In this setup, the request is sent from Postman to the configured proxy, where it gets encrypted before being forwarded to the web server.
-
-We have successfully configured our testing flow as:
-Postman → Burp Suite → Application Proxy Server → Web Server
-
-However, the responses observed in Burp Suite appear to be encrypted and are not readable.
-
-Could you please advise on how we can effectively test APIs in this scenario,
+I suspect this may be due to the fact that the provided EXE automatically installs certificates into the system trust store, and Postman is able to use that trust context. However, Burp Suite may not be inheriting or utilizing the same certificate/trust configuration, which could be causing it to receive the encrypted response.
