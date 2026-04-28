@@ -1,1 +1,7 @@
-https://cms.test.lifevalidationservices.citi.com/Account/ResetPassword?userId=fbacace0-5bd3-46a7-b0f5-f00004b277da&code=7tiqvwz2EbxhSVOHuvzBFOLsIm7fNDe8D5yrW2FHv4GTRwirAsR65WjWbxiQRoF5CsX1luMMBJhD0GGN939oFESHtokW76xzMmZL%2B7BVfJzYToW6FcdW3IHboJNNKRQVQzAlda3RRnA7sofXoFo1DI22VK1Ph5thTX4pXC2rw01itvLhoGUdVjZ2MsL0S8SFhKXW8lfG8fo7pFL9%2BGNfKg%3D%3D
+Hi,
+
+This VA assessment involves testing across different user roles, which, as per your email, include Grant Manager and Program Officer. To effectively validate access control scenarios, we require two user accounts for each role. This allows us to test and verify whether access to data and functionalities is appropriately enforced across the application.
+
+However, we understand that the application requires desktop (AD) credentials for login. As per Citi policy, sharing such credentials with multiple team members is not permitted due to security concerns and potential alerts.
+
+Since the assessment will be conducted by a single tester, we request the provision of dummy/test accounts for each role. These accounts should have credentials that can be safely shared and used to access the respective roles within the application.
