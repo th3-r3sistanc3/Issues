@@ -1,9 +1,11 @@
 Hi,
 
-As this is a compliance VA, I don’t think we can proceed without validating role-based access controls. Specifically, we need to verify whether a Program Officer role can access the data or functionality of a Grant Manager (i.e., whether a lower-privileged user can access higher-privileged functionality).
+For 316112:H1, we reported a “Suspicious Files Found” issue, as some configuration files were publicly accessible. The application team has since removed or restricted access to those files.
 
-Even if we proceed otherwise, we will still need two Grant Manager accounts, which would ultimately require creating dummy/test accounts for proper validation.
+However, during retesting, we identified that a few files are still publicly accessible. According to the team, these files do not contain any sensitive information and are intended to be publicly accessible.
 
-Please let us know how we can proceed.
+Could you please advise whether we should downgrade the severity of this issue or close the finding?
+
+PFA the list of files that are currently accessible.
 
 Thanks.
